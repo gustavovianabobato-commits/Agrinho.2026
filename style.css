@@ -1,1 +1,284 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #f0f9f0 0%, #e6f3e6 100%);
+    color: #1a4d1a;
+    line-height: 1.6;
+    font-size: 100%;
+    transition: font-size 0.2s ease;
+}
+
+/* ===== CABEÇALHO E MENU ===== */
+header {
+    background: linear-gradient(135deg, #0a3d0a, #1a6e1a);
+    color: white;
+    padding: 1rem 0;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.logo h1 {
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+}
+
+.logo p {
+    font-size: 0.8rem;
+    opacity: 0.9;
+}
+
+.menu {
+    display: flex;
+    list-style: none;
+    gap: 1.2rem;
+    flex-wrap: wrap;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.5rem 0;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+}
+
+.menu a:hover {
+    border-bottom-color: #ffdd55;
+    color: #ffdd55;
+}
+
+/* Acessibilidade */
+.acessibilidade {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.acessibilidade button {
+    background: #ffdd55;
+    border: none;
+    padding: 0.3rem 0.8rem;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    color: #1a4d1a;
+    transition: 0.2s;
+}
+
+.acessibilidade button:hover {
+    background: #ffc107;
+    transform: scale(1.05);
+}
+
+/* ===== MAIN E SEÇÕES ===== */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+section {
+    background: white;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    border-radius: 28px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.08);
+    transition: transform 0.2s;
+}
+
+section:hover {
+    transform: translateY(-3px);
+}
+
+h2 {
+    color: #1a6e1a;
+    margin-bottom: 1.2rem;
+    padding-left: 1rem;
+    border-left: 6px solid #ffdd55;
+    font-size: 1.8rem;
+}
+
+/* ===== IMAGEM ===== */
+.imagem-destaque img {
+    width: 100%;
+    max-height: 350px;
+    object-fit: cover;
+    border-radius: 20px;
+    margin-top: 1rem;
+}
+
+.legenda {
+    font-size: 0.8rem;
+    color: #555;
+    text-align: center;
+    margin-top: 0.5rem;
+}
+
+/* ===== GRID DE PROBLEMAS ===== */
+.grid-problemas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card-problema {
+    background: #fff8e7;
+    padding: 1.2rem;
+    border-radius: 20px;
+    border-left: 5px solid #e67e22;
+}
+
+.card-problema h3 {
+    color: #e67e22;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== GRID DE SOLUÇÕES ===== */
+.grid-solucoes {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card-solucao {
+    background: #e8f5e9;
+    padding: 1.2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: 0.2s;
+}
+
+.card-solucao:hover {
+    background: #c8e6c9;
+    transform: scale(1.02);
+}
+
+.card-solucao h3 {
+    color: #2e7d32;
+    margin-bottom: 0.5rem;
+}
+
+/* ===== GERADOR DE DICAS ===== */
+.card-dica {
+    background: #fff8e7;
+    border-radius: 28px;
+    padding: 2rem;
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.dica-area {
+    background: white;
+    border-radius: 60px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#textoDica {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #1a4d1a;
+}
+
+.btn-sustentavel {
+    background: #2e7d32;
+    color: white;
+    border: none;
+    padding: 0.8rem 2rem;
+    font-size: 1.1rem;
+    font-weight: bold;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.btn-sustentavel:hover {
+    background: #1b5e20;
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* ===== CURIOSIDADES ===== */
+.lista-curiosidades {
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+.lista-curiosidades li {
+    margin: 0.8rem 0;
+    font-size: 1rem;
+}
+
+/* ===== CONCLUSÃO ===== */
+.frase-final {
+    background: #1a6e1a;
+    color: white;
+    padding: 1.2rem;
+    border-radius: 20px;
+    text-align: center;
+    font-style: italic;
+    margin-top: 1rem;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background: #0a2b0a;
+    color: #ccc;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 2rem;
+    font-size: 0.85rem;
+}
+
+/* ===== RESPONSIVIDADE ===== */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .menu {
+        justify-content: center;
+    }
+    
+    main {
+        padding: 1rem;
+    }
+    
+    section {
+        padding: 1.2rem;
+    }
+    
+    h2 {
+        font-size: 1.4rem;
+    }
+    
+    #textoDica {
+        font-size: 1rem;
+    }
+}
